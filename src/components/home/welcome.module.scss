@@ -1,0 +1,105 @@
+@import '../../../scss/shared';
+.welcome {
+	margin-top: -1.6rem;
+	padding-top: 120px;
+	position: relative;
+
+	background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/welcome.jpg');
+	background-size: cover;
+	min-height: 100vh;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+
+.locale {
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+	a,
+	a:hover {
+		font-weight: 400;
+		color: $color-gray-light !important;
+	}
+}
+
+.left {
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.left a {
+	margin-bottom: 20px;
+}
+
+.right {
+	cursor: pointer;
+	display: block;
+	float: right;
+	margin: 20px;
+	margin-top: 90px;
+	padding: 20px 40px;
+	color: $color-gray-light;
+}
+
+.text {
+	font-size: $font-bigger;
+	backface-visibility: hidden;
+	color: $color-gray-light;
+}
+
+.logo {
+	display: none;
+}
+
+.button {
+	padding: 1rem 2rem;
+	margin-right: 1rem;
+}
+
+@media only screen and (max-width: $screen-medium) {
+	.welcome {
+		background-attachment: scroll;
+	}
+}
+
+@media only screen and (max-width: $screen-small) {
+	.welcome {
+		background-attachment: scroll;
+	}
+
+	.left {
+		margin-top: 5rem;
+		button {
+			font-size: $font-small;
+		}
+	}
+
+	.right {
+		cursor: pointer;
+		display: block;
+		float: none;
+		margin: 0 auto;
+		margin-top: 90px;
+		padding: 0;
+	}
+
+	.logo {
+		display: block;
+		color: $color-gray-light;
+		font-size: $font-large;
+		font-weight: 500;
+		position: absolute;
+		left: 1rem;
+		top: 1rem;
+	}
+
+	.button {
+		font-size: $font-small;
+		padding: 0.7rem 1.5rem;
+	}
+
+	.text {
+		font-size: $font-big;
+	}
+}

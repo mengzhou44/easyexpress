@@ -1,0 +1,14 @@
+.share {
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 2rem;
+	max-width: 40rem;
+	width: 100%;
+}
+
+.share-item {
+	cursor: pointer;
+}

@@ -1,0 +1,78 @@
+@import '../../../scss/shared';
+
+.services {
+	padding-top: 12rem;
+
+	background: linear-gradient(rgba($color-black, 0.6), rgba($color-black, 0.6)),
+		url('/img/space.jpg');
+	color: $color-gray-light;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.services p {
+	padding: 0 1rem;
+	text-align: center;
+	line-height: 145%;
+	color: $color-gray-light;
+}
+
+.services ul {
+	list-style: none;
+	width: 100%;
+}
+
+.services li {
+	display: block;
+	float: left;
+	width: 30%;
+	margin: 1rem;
+}
+
+.content {
+	width: 100%;
+	padding-top: 5rem;
+	color: $color-gray;
+}
+
+.smartmat {
+	margin: 0 auto;
+	position: relative;
+	height: 60rem;
+	width: 40%;
+	padding: 1rem;
+	overflow: hidden;
+}
+
+.content h3 {
+	text-align: center;
+	color: $color-gray-light;
+	margin-bottom: 1rem;
+	word-spacing: 0.3rem;
+}
+
+.content p {
+	font-size: $font-normal;
+	width: 80%;
+	margin-left: 10%;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.carousel {
+	margin: 0 auto;
+	max-width: 50rem;
+}
+.fun-lunch-image {
+	width: 50rem !important;
+	height: auto;
+	object-fit: contain;
+}
+
+@media only screen and (max-width: $screen-small) {
+	.smartmat {
+		height: 35rem;
+		width: 60%;
+	}
+}

@@ -1,0 +1,26 @@
+@import '../../../scss/shared';
+
+.weather {
+	padding: 5px;
+	font-size: $font-normal;
+}
+
+.local-weather {
+	cursor: pointer;
+	text-align: center;
+	color: $color-gray-light;
+}
+
+.content {
+	text-align: center;
+	color: $color-white;
+	div {
+		margin: 5px;
+	}
+	&:link,
+	&:active,
+	&:hover,
+	&:visited {
+		color: $color-white;
+	}
+}

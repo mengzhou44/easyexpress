@@ -1,0 +1,21 @@
+@mixin center-screen {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin bottom-fixed {
+	display: block;
+	position: fixed;
+	bottom: 3rem;
+	right: 1rem;
+	z-index: $z-index-high;
+	border: none;
+	outline: none;
+	cursor: pointer;
+
+	@media only screen and (max-width: $screen-small) {
+		bottom: 5rem;
+	}
+}

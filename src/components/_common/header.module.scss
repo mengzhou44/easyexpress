@@ -1,0 +1,99 @@
+@import '../../../scss/shared';
+
+.header {
+	width: 100%;
+	height: $header-height;
+	background-image: linear-gradient(to right, $color-red, $color-red);
+
+	color: $color-white;
+	position: fixed;
+	top: 0;
+	z-index: $z-index-higher;
+	padding: 0rem 0.5rem;
+	padding-left: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.home {
+	height: $header-height;
+	font-size: $font-big;
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	flex: 1;
+}
+
+.home-icon {
+	display: none;
+}
+
+.menu {
+	height: $header-height;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex: 1.4;
+}
+
+.menu-item--selected,
+.menu-item {
+	font-size: $font-big;
+	cursor: pointer;
+}
+
+.menu-item--selected {
+	color: $color-red;
+	background-color: $color-white;
+	font-weight: 500;
+	padding: 0.5rem 1rem;
+	border-radius: 3px;
+}
+
+@media only screen and (max-width: $screen-small) {
+	.menu {
+		flex-grow: 1;
+	}
+
+	.menu-item--selected,
+	.menu-item {
+		font-size: $font-small;
+		font-weight: 500;
+		padding: 1rem 0;
+		flex-grow: 1;
+		border-left: 1px solid #ccc;
+		text-align: center;
+		border-radius: 0;
+	}
+
+	.home {
+		width: 3rem;
+		flex: none;
+	}
+
+	.home-icon {
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		object-fit: cover;
+		border-radius: 3px;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.header {
+		position: fixed;
+		bottom: 0;
+		top: auto;
+		height: 4rem;
+		padding: 0rem;
+		padding-left: 1rem;
+		background: $color-gray-light;
+		color: $color-gray-dark;
+	}
+}

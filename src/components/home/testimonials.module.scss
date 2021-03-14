@@ -1,0 +1,31 @@
+@import '../../../scss/shared';
+
+.testimonials {
+	text-align: justify;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	font-size: $font-normal;
+	line-height: 145%;
+	position: relative;
+	margin-top: 4rem;
+
+	cite {
+		display: block;
+		margin-top: 1rem;
+		font-size: $font-small;
+		font-weight: 500;
+	}
+}
+
+blockquote:before {
+	content: '\201C';
+	font-size: 500%;
+	display: block;
+	position: absolute;
+	top: -0.5rem;
+	left: -0.5rem;
+	color: $color-red;
+}

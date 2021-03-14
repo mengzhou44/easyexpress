@@ -1,0 +1,31 @@
+@import '../../../scss/shared';
+
+.swiper {
+	display: none;
+	height: 4rem;
+	font-size: $font-big;
+	width: 100%;
+}
+
+.swiper-category {
+	font-weight: 500;
+	width: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		margin-left: 2rem;
+		width: 2rem;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+@media only screen and (max-width: $screen-small) {
+	.swiper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

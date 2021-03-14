@@ -1,0 +1,23 @@
+@import '../../../scss/shared';
+
+.tabs {
+	position: relative;
+}
+
+.tabs {
+	img {
+		position: absolute;
+		right: 1.5rem;
+		top: 0.5rem;
+		width: 2.5rem;
+		height: auto;
+		object-fit: cover;
+		cursor: pointer;
+	}
+}
+
+@media only screen and (max-width: $screen-small) {
+	.tabs {
+		display: none;
+	}
+}

@@ -1,0 +1,78 @@
+input[type='file'] {
+	display: none;
+}
+
+.input-field,
+.input-field--disabled {
+	position: relative;
+	padding-top: 1.5rem;
+}
+
+.input-field--disabled {
+	background-color: $color-gray-light;
+}
+
+.input,
+.input[type='text'] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	font-size: $font-normal;
+	font-family: inherit;
+	color: $color-gray-dark;
+	background: none;
+	font-weight: 400;
+	padding: 0.5rem;
+	padding-top: 1rem;
+	display: block;
+	width: 100% !important;
+	border: none;
+	border-bottom: 1px solid $color-gray;
+	border-radius: 0;
+	z-index: 2;
+	outline: 0;
+}
+
+.input[disabled],
+.input:focus,
+.input:not([value='']) {
+	outline: none;
+	border-bottom: 1px solid darken($color-green, 0.2);
+}
+.input[disabled] + .input-label,
+.input:focus + .input-label,
+.input:not([value='']) + .input-label {
+	top: 0rem;
+	left: 0rem;
+	font-size: $font-tiny;
+	font-weight: 500;
+	color: darken($color-green, 0.2);
+}
+
+.input-label {
+	display: block;
+	position: absolute;
+	top: 2rem;
+	left: .5rem;
+	font-size: $font-normal;
+	z-index: 1;
+	transition: all 0.2s ease;
+	pointer-events: none;
+}
+
+.input-field .error {
+	margin-top: 0.5rem;
+}
+
+textarea {
+	-webkit-appearance: none;
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid $color-gray-light;
+	background-color: $color-white;
+	padding: 0.5rem;
+	font-size: $font-normal;
+	::placeholder {
+		font-size: $font-normal;
+	}
+}

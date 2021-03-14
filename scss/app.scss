@@ -1,0 +1,34 @@
+//scss --watch --sourcemap=none scss/app.scss:public/style.min.css --style compressed
+
+@import '0-external/semantic/semantic';
+@import '0-external/bootstrap/embeded';
+
+@import '0-external/react/react-toastify';
+@import '0-external/react/react-id-swiper';
+
+@import '1-base/variables';
+@import '1-base/mixins';
+@import '1-base/typography';
+@import '1-base/base';
+@import '1-base/utilities';
+
+@import '2-css-components/button';
+@import '2-css-components/collapsible';
+@import '2-css-components/input';
+@import '2-css-components/link';
+@import '2-css-components/tabs';
+@import '2-css-components/radio-group';
+@import '2-css-components/composition';
+
+.border-test {
+	border: 1px solid red;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.error {
+	color: $color-red;
+	font-size: $font-normal;
+}

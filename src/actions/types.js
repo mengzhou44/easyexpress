@@ -1,0 +1,7 @@
+export const SET_LOCALE = 'SET_LOCALE'
+
+export const SET_FEEDS = 'SET_FEEDS'
+
+export const SET_FEEDS_CATEGORIES = 'SET_FEEDS_CATEGORIES'
+
+export const SET_FEEDS_CATEGORY = 'SET_FEEDS_CATEGORY'

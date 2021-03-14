@@ -1,0 +1,99 @@
+@import '../../../scss/shared';
+
+.about {
+	padding-top: 12rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.company {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.images,
+.images:hover,
+.images:link,
+.images:active,
+.images:visited {
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	padding-right: 1.5rem;
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.github,
+.github:hover,
+.github:link,
+.github:active,
+.github:visited {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.photo {
+	width: 6rem;
+	height: auto;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.linkedIn {
+	position: absolute;
+	right: 0rem;
+	bottom: 1rem;
+	height: 2rem;
+	background-color: $color-gray-light;
+}
+
+.about p {
+	font-size: $font-large;
+	line-height: 145%;
+	width: 80%;
+	text-align: justify;
+	margin: 2rem 10%;
+}
+
+.clients {
+	background-color: $color-gray-light;
+	text-align: center;
+	font-size: $font-normal;
+	width: 80%;
+	margin: 2rem 10%;
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+.clients ul li {
+	text-align: left;
+	list-style: circle;
+	padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: $screen-small) {
+	.clients {
+		font-size: $font-small;
+		width: 100%;
+		margin: 2rem 0;
+	}
+	.company {
+		width: 100%;
+	}
+	.about p {
+		width: 100%;
+		margin: 2rem auto;
+		padding: 1rem;
+		text-align: justify;
+		line-height: 145%;
+	}
+
+	.clients li {
+		text-align: center;
+	}
+}

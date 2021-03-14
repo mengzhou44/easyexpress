@@ -1,0 +1,36 @@
+$color-white: #fff;
+$color-black: #000000;
+
+$color-gray-light: #f8f7f7;
+$color-gray: #555;
+$color-gray-dark: #333;
+
+$color-red: #f45063;
+
+$color-green: #00a98f;
+$color-blue: #146eb4;
+
+.color-white {
+	color: $color-white;
+}
+
+$screen-tiny: 480px;
+$screen-small: 576px;
+$screen-medium: 768px;
+$screen-large: 1023px;
+
+$font-huge: 33px;
+$font-bigger: 25px;
+$font-big: 20px;
+$font-large: 18px;
+$font-normal: 16px;
+$font-small: 13px;
+$font-tiny: 10px;
+
+$header-height: 7rem;
+
+$header-height-small: 5rem;
+
+$z-index-normal: 1;
+$z-index-high: 2;
+$z-index-higher: 3;

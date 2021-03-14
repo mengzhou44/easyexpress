@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+select {
+	height: 3rem;
+}
+
+.selected {
+	border-radius: 3px;
+	background-color: $color-white !important;
+	color: $color-red !important;
+	font-weight: 500;
+}
+
+section {
+	padding: 6rem 0;
+	@media only screen and (max-width: $screen-small) {
+		padding: 3rem 0.5rem !important;
+	}
+}
+
+.box {
+	padding: 1%;
+}
+
+.box p {
+	font-size: 90%;
+	line-height: 145%;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+.clearfix:after {
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
+}

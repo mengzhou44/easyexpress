@@ -1,0 +1,35 @@
+@import '../../../scss/shared';
+
+.page {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.content-box {
+	flex-grow: 1;
+}
+
+.content {
+	margin-top: $header-height;
+	padding-top: 1rem;
+}
+
+.footer {
+	background-color: $color-gray-dark !important;
+	color: $color-gray-light;
+	height: 40px;
+	width: 100%;
+	border-top: 1px solid $color-gray;
+	font-size: $font-small;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px;
+}
+
+@media only screen and (max-width: $screen-small) {
+	.content {
+		margin-top: 0;
+	}
+}

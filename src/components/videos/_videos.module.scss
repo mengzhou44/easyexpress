@@ -1,0 +1,8 @@
+@import '../../../scss/shared';
+
+.videos {
+}
+
+.scroll-top {
+	@include bottom-fixed;
+}

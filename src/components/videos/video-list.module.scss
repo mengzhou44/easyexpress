@@ -1,0 +1,95 @@
+@import '../../../scss/shared';
+.list {
+	list-style: none;
+	li {
+		a {
+			border-bottom: none;
+			color: $color-black;
+			&:link,
+			&:visit {
+				color: $color-black;
+			}
+		}
+	}
+}
+
+.item {
+	display: flex;
+	padding: 0.5rem;
+	padding-top: 1rem;
+	margin-bottom: 1.8rem;
+	cursor: pointer;
+	&:hover {
+		background-color: $color-gray-light;
+	}
+	transition: all, 0.4s;
+}
+
+.image {
+	border-radius: 3px;
+	width: 15rem;
+	height: auto;
+}
+
+.title {
+	margin-left: 0.5rem;
+	font-size: $font-normal;
+	margin-bottom: 1rem;
+	text-transform: lowercase;
+	cursor: pointer;
+}
+
+.info {
+	margin-top: 1rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+}
+
+.date {
+	font-size: $font-small;
+	font-style: italic;
+}
+
+.views {
+	margin-left: 1rem;
+	font-size: $font-small;
+}
+
+@media only screen and (max-width: $screen-medium) {
+	.item {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.image {
+		align-self: stretch;
+		width: 60%;
+	}
+
+	.title {
+		width: 25rem;
+		margin: 0 auto;
+	}
+
+	.info {
+		margin: 0 auto;
+		width: 25rem;
+		justify-content: space-between;
+		padding-bottom: 1rem;
+	}
+
+	.date {
+		font-size: $font-small;
+	}
+
+	.views {
+		font-size: $font-small;
+		margin-top: 5px;
+		margin-left: 0 !important;
+	}
+}

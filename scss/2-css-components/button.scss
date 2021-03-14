@@ -1,0 +1,54 @@
+.btn,
+.btn-round {
+	position: relative;
+	background-color: $color-red;
+	color: $color-gray-light;
+	border-radius: 3px;
+	border: none;
+	font-size: $font-normal;
+	padding: 0.7rem 1rem;
+
+	&:focus,
+	&:hover,
+	&:active,
+	&:visited {
+		background-color: $color-red;
+		transform: translateY(-2px);
+	}
+	cursor: pointer;
+}
+
+.btn {
+	min-width: 10rem;
+	min-height: 3rem;
+}
+
+.btn-round {
+	border-radius: 30px;
+	padding: 1rem 2rem;
+}
+.btn-circle {
+	border-radius: 50%;
+	padding: 0.4rem;
+	width: 5rem;
+	height: 5rem;
+	font-size: $font-normal;
+	background-color: $color-red;
+	position: relative;
+
+	img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 70%;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: $screen-medium) {
+	.btn-circle {
+		width: 6rem;
+		height: 6rem;
+	}
+}
