@@ -1,29 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import intl from 'react-intl-universal'
 import { Gmaps, Marker, InfoWindow } from 'react-gmaps'
 import { connect } from 'react-redux'
-import { toast } from 'react-toastify'
-
 import ContactMessageForm from './contact-message-form'
-import { decrypt } from '../../shared/crypto'
+
 import styles from './contact.module.scss'
-import { fetchGoogle } from '../../services/google'
+
 import { sendMessage } from '../../services/send-message'
 
 function Contact({ currentLocale }) {
 	const [showInfoWindow, setShowInfoWindow] = useState(false)
-	const [googleApiKey, setGoogleApiKey] = useState('')
-
-	useEffect(() => {
-		fetchGoogle(({ error, data }) => {
-			if (error !== '') {
-				toast.error(error)
-			} else {
-				const { map } = JSON.parse(decrypt(data))
-				setGoogleApiKey(map)
-			}
-		})
-	}, [])
+	const googleApiKey= process.env.REACT_APP_GOOGLE_API_KEY
 
 	function renderInfoWindow() {
 		if (showInfoWindow) {

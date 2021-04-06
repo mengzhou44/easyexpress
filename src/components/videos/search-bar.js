@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from 'react'
-
 import intl from 'react-intl-universal'
-import { toast } from 'react-toastify'
-
 import styles from './search-bar.module.scss'
-import { decrypt } from '../../shared/crypto'
-import { fetchGoogle } from '../../services/google'
+
 import { searchVideos } from '../../services/search-videos'
 
 export default function SearchBar({ onVideosFound }) {
 	const [term, setTerm] = useState('Finger Family Collection')
 	const [order, setOrder] = useState('viewCount')
-	const [apiKey, setApiKey] = useState('')
+	const apiKey = process.env.REACT_APP_GOOGLE_API_KEY
 
 	useEffect(() => {
-		fetchGoogle(async ({ error, data }) => {
-			if (error !== '') {
-				toast.error(error)
-			} else {
-				const apiKey = JSON.parse(decrypt(data)).video
-				setApiKey(apiKey)
-				const videos = await searchVideos({ apiKey, term, order })
-				onVideosFound(videos)
-			}
-		})
+		const search= async ()=> {
+			const videos = await searchVideos({ apiKey, term, order })
+			onVideosFound(videos)
+
+		}
+		search();
 	}, [])
 
 	function toggleOrder() {
