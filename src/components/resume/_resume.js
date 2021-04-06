@@ -202,7 +202,7 @@ function Resume() {
 				</div>
 				<p>
 					Designed, developed, tested, and deployed robust, n-tiered user friendly web sites:
-					easyexpresssoft.com, easyfunlunch.com.
+					justsimpletech.com, easyfunlunch.com.
 				</p>
 				<ul className={styles['achievements']}>
 					<li className={styles['company-item']}>

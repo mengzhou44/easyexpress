@@ -10,7 +10,7 @@ export function About() {
 				{intl.get('home.about.company')}
 				<a
 					className={styles.images}
-					href="https://www.linkedin.com/in/daniel-zhou-8788bb5/"
+					href="https://www.linkedin.com/in/mengzhou44"
 					target="__blank"
 				>
 					<img className={styles.photo} src="/img/my-photo.jpeg" alt="myphoto" />

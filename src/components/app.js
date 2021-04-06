@@ -3,8 +3,6 @@ import { Router, Switch, Route, Redirect } from 'react-router-dom'
 import {createBrowserHistory} from 'history'
 import { connect } from 'react-redux'
 import Loadable from 'react-loadable'
-
-
 import * as actions from '../actions'
 import withTracker from '../shared/with-tracker'
 
@@ -33,10 +31,6 @@ const Home = Loadable({
 	loading: Loading
 })
 
-const Blog = Loadable({
-	loader: () => import('./blog/_blog'),
-	loading: Loading
-})
 
 const Feeds = Loadable({
 	loader: () => import('./news/_feeds'),
@@ -70,7 +64,6 @@ function App({ setLocale }) {
 						<Route exact path="/services" component={withTracker(Home)} />
 						<Route exact path="/about" component={withTracker(Home)} />
 						<Route exact path="/welcome" component={withTracker(Home)} />
-						<Route exact path="/blog" component={withTracker(Blog)} />
 						<Route exact path="/videos" component={withTracker(Videos)} />
 						<Route exact path="/resume" component={withTracker(Resume)} />
 						<Route exact path="/news/:category?/:feedLink?" component={withTracker(Feeds)} />
