@@ -3,7 +3,7 @@ import {
 	renderComponentAppendToBody,
 	unmountComponent
 } from '../../shared/test'
- 
+
 import Contact from './contact'
 
 describe('Contact', () => {
@@ -16,13 +16,7 @@ describe('Contact', () => {
 		unmountComponent(div)
 	})
 
-	it('should call fetchGoogle service while initializing...', () => {
-		const spy = jest.spyOn(require('../../services/google'), 'fetchGoogle')
-		div = renderComponentAppendToBody(Component)
-		expect(spy).toHaveBeenCalledTimes(1)
-	})
-
-	it.only('click submit button without input, should display validation error', () => {
+	it('click submit button without input, should display validation error', () => {
 		div = renderComponentAppendToBody(Component)
 
 		expect(div).toMatchSnapshot()
